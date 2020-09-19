@@ -115,9 +115,11 @@ while alive:
             ## mouse right click
             if e.button == 3:
                 if chan == 7:
-                    chan = 1  # TODO: not sure if this is the right channel to choose
+                    chan = 1  # modulation wheel
                 elif chan == 1:
-                    chan = 7
+                    chan = 14  # unassigned
+                elif chan == 14:
+                    chan = 7  # volume wheel
                 print(chan)
                 chan_val = font.render(str(chan), True, (0, 0, 0))  # TODO: figure out where automation is going to and why it isn't showing on screen
 
